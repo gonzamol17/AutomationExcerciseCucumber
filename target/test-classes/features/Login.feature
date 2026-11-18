@@ -1,4 +1,3 @@
-
 Feature: Login exitoso en Automation Exercise
 
   Scenario: Login exitoso con credenciales válidas

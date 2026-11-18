@@ -3,16 +3,19 @@ package stepsDefinitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+import pageObject.HeaderMenuPage;
 import pageObject.HomePage;
 import pageObject.LoginPage;
 
 public class LoginSteps {
     private final HomePage hp;
     private final LoginPage lp;
+    private final HeaderMenuPage hmp;
 
-    public LoginSteps(HomePage hp, LoginPage lp) {
+    public LoginSteps(HomePage hp, LoginPage lp,  HeaderMenuPage hmp) {
         this.hp = hp;
         this.lp = lp;
+        this.hmp = hmp;
     }
 
     @When("ingresa el email {string}")
@@ -32,9 +35,8 @@ public class LoginSteps {
 
     @Then("el usuario debe ver el mensaje {string}")
     public void el_usuario_debe_ver_el_mensaje(String expectedText) {
-
         Assert.assertTrue(
-                hp.getLoggedInAsText().contains(expectedText),
+                hmp.getLoggedInAsText().contains(expectedText),
                 "No se encontró el texto esperado: " + expectedText
         );
     }

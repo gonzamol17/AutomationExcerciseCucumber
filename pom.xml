@@ -89,6 +89,8 @@
       <artifactId>slf4j-api</artifactId>
       <version>1.7.36</version> <!-- Compatible con log4j-slf4j-impl 2.20.0 -->
     </dependency>
+
+
   </dependencies>
 
   <build>

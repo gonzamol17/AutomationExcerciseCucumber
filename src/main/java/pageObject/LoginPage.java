@@ -7,13 +7,13 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPage extends Base_PO{
 
     @FindBy(css = "input[data-qa='login-email']")
-    WebElement email_TextField;
+    private WebElement email_TextField;
     @FindBy(css = "input[data-qa='login-password']")
-    WebElement password_TextField;
+    private WebElement password_TextField;
     @FindBy(css = "button[data-qa='login-button']")
-    WebElement login_Button;
+    private WebElement login_Button;
     @FindBy(xpath = "//p[normalize-space()='Your email or password is incorrect!']")
-    WebElement redWrongLoginMsg;
+    private WebElement redWrongLoginMsg;
 
 
 

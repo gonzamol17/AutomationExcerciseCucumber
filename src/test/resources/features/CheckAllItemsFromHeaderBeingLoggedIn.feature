@@ -1,5 +1,5 @@
 Feature: Validación de opciones del header en Automation Exercise
-  @smoke
+
   Scenario: Verificar todas las opciones del header luego del login
     Given el usuario navega al home de Automation Exercise
     When accede a la opción Signup Login
